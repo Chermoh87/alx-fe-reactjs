@@ -36,21 +36,17 @@ const Search = () => {
                 <button type="submit" className="mt-4 bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">Search</button>
             </form>
 
-            {loading && <p className="text-center">Loading...</p>}
-            {error && <p className="text-center text-red-500">Looks like we can't find the user</p>}
+            {loading && <p>Loading...</p>}
+            {error && <p>Looks like we cant find the user</p>} 
+            {results && results.map((user) => (
+              <div key={user.id}>
+                <img src={user.avatar_url} alt={user.login} />
+                <h2>{user.login}</h2>
+                <p>{user.location}</p>
+                <a href={user.html_url}>View Profile</a>
+              </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {results.map((user) => (
-                    <div key={user.id} className="bg-white border p-4 rounded-lg shadow hover:shadow-xl transition">
-                        <img src={user.avatar_url} alt={user.login} className="w-20 h-20 rounded-full mx-auto" />
-                        <h2 className="text-center mt-2 font-bold">{user.login}</h2>
-                        <p className="text-center text-gray-600">{user.location || "Location hidden"}</p>
-                        <div className="text-center mt-4">
-                            <a href={user.html_url} target="_blank" className="text-blue-500 hover:underline">View Profile</a>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            ))}
         </div>
     );
 };
