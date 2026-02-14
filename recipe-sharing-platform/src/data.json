@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "title": "Spaghetti Carbonara",
+    "summary": "A classic Italian pasta dish...",
+    "image": "[https://via.placeholder.com/150](https://via.placeholder.com/150)",
+    "ingredients": ["Spaghetti", "Eggs", "Bacon"],
+    "instructions": ["Boil pasta", "Fry bacon", "Mix eggs"]
+  },
+  {
+    "id": 2,
+    "title": "Chicken Tikka Masala",
+    "summary": "Chunks of grilled chicken...",
+    "image": "[https://via.placeholder.com/150](https://via.placeholder.com/150)",
+    "ingredients": ["Chicken", "Yogurt", "Spices"],
+    "instructions": ["Marinate chicken", "Cook sauce"]
+  }
+]
